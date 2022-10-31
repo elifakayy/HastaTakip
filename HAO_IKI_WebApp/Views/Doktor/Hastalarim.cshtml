@@ -1,0 +1,52 @@
+﻿@{
+    Layout = "_MainLayout";
+}
+@using System.Data
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header card-header-primary">
+                <h4 class="card-title" style="font-size:26px; font-weight:bold">Hasta Listesi</h4>
+                <p class="card-category">Bu tablodan hastalarınıza ulaşabilirsiniz.</p>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive" style="font-size:1.1em; font-weight:400">
+                    <table id="hasta" class="table" style="width:100%;">
+                        <thead class=" text-primary">
+                            <tr>
+                                <th data-sortable="true">
+                                    Adı Soyadı
+                                </th>
+                                <th data-sortable="true">
+                                    Yaşadığı Şehir
+                                </th>
+                                <th data-sortable="true">
+                                    Doğum Tarihi
+                                </th>
+                                <th data-sortable="true">
+                                    Cinsiyet
+                                </th>
+                                <th data-sortable="true">
+                                    Anjiyo Ödem Tipi
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                             @foreach(DataRow dr in ViewBag.datatable.Rows)
+                            {
+                                <tr>
+                                    <td>@dr["ad_soyad"]</td>
+                                    <td>@dr["yasadigi_sehir"]</td>
+                                    <td>@dr["dogum_tarihi"]</td>
+                                    <td>@dr["cinsiyet_str"]</td>
+                                    <td>@dr["anjiyoodem_tipi_str"]</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

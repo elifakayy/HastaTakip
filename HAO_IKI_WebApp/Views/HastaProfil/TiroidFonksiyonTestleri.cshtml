@@ -1,0 +1,152 @@
+﻿@{
+    Layout = "_Mainlayout";
+}
+                    <h4 class="fw-bold py-3 mb-4">
+                        <span class="text-muted fw-light">Hasta Profili </span>
+                    </h4>
+
+
+                    <!-- Header -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card mb-4">
+
+                                <div class="user-profile-header d-flex flex-column flex-sm-row text-sm-start text-center mb-4">
+
+                                    <div class="flex-grow-1 mt-3 mt-sm-3">
+                                        <div class="d-flex align-items-md-end align-items-sm-start align-items-center justify-content-md-between justify-content-start mx-4 flex-md-row flex-column gap-4">
+                                            <div class="user-profile-info">
+                                                <h4>AYŞE NUR</h4>
+                                                <ul class="list-inline mb-0 d-flex align-items-center flex-wrap justify-content-sm-start justify-content-center gap-2">
+                                                    
+                                                    <li class="list-inline-item fw-semibold">
+														<i class="">Yaş : </i> 38
+													</li>
+                                                    <li class="list-inline-item fw-semibold">
+                                                        <i>Cinsiyet : </i> Kadın
+                                                    </li>
+                                                    <li class="list-inline-item fw-semibold">
+                                                        <i> Anjio Ödem Tipi : </i> 1
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <a href="Kontroller" class="btn btn-primary text-nowrap" style="margin-left:0px; margin-right:0px; ">
+                                                <i class='bx bx-user-check'></i> Kontroller
+                                            </a>
+                                            
+                                            <a href="javascript:void(0)" class="btn btn-primary text-nowrap">
+                                                <i class='bx bx-user-check'></i> Hastayı Ata
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Header -->
+
+                  <div class="row ">
+                <div  class="col-md-12 ">
+                  <div class="my-custom-scrollbar my-custom-scrollbar-primary">
+
+
+                                <ul class="nav nav-pills flex-column flex-md-row mb-3 " style="font-size: 12px">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="DemografikVeriler"><i class="bx bx-user me-1"></i> DEMOGRAFİK VERİLER 1</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="DemografikVerilerIki"><i class="bx bx-bell me-1"></i> DEMOGRAFİK VERİLER 2</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="Komorbidite"><i class="bx bx-link-alt me-1"></i> KOMORBİDİTE</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="Kompleman"><i class="bx bx-link-alt me-1"></i> KOMPLEMAN</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="TiroidFonksiyonTestleri"><i class="bx bx-link-alt me-1"></i> TİROİD FONKSİYON TESTLERİ VE OTOANTİKOR</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="Genetik"><i class="bx bx-link-alt me-1"></i> GENETİK</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="HepatitSerolojisi"><i class="bx bx-link-alt me-1"></i> HEPATİT SEROLOJİSİ</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="YanlisTani"><i class="bx bx-link-alt me-1"></i> YANLIŞ TANI</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="YasamBoyuAtakOzellikleri"><i class="bx bx-link-alt me-1"></i> YAŞAM BOYU ATAK ÖZELLİKLERİ</a>
+                                    </li>
+                                </ul>
+                            </div>
+                  
+                </div>
+              </div>
+       
+              <h4 class="fw-bold py-3 mb-4">
+                <span>HASTA BİLGİLERİ</span> 
+              </h4>
+
+
+              <div class="row">
+                <!-- Vertical Scrollbar -->
+                <div class="col-md-12 col-sm-12">
+                  <div class="card overflow-auto mb-12" style="height: 350px">
+                    <h5 class="card-header">TİROİD FONKSİYON TESTLERİ VE OTOANTİKOR</h5>
+                    <div class="card-body" id="vertical-example">
+                      <form id="formAccountSettings" method="POST" onsubmit="return false">
+                          <hr />
+                                        <div class="row">
+                                            <div class="mb-3 col-md-3 bg-label-secondary">
+                                                <label for="tshDuzey" class="form-label"type="form-label" id="tshDuzey" name="tshDuzey" autofocus>TSH Düzey : </label>
+                                            </div>
+                                            <div class="mb-3 col-md-3 bg-label-secondary">
+                                                <label for="tshBirim" class="form-label"type="form-label" id="tshBirim" name="tshBirim" autofocus>TSH Birim : </label>
+                                            </div>
+                                            <div class="mb-3 col-md-3">
+                                                <label for="ft4Duzey" class="form-label"type="form-label" id="ft4Duzey" name="ft4Duzey" autofocus>FT4 Düzey : </label>
+                                            </div>
+                                            <div class="mb-3 col-md-3">
+                                                <label for="ft4Birim" class="form-label"type="form-label" id="ft4Birim" name="ft4Birim" autofocus>FT4 Birim : </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="mb-3 col-md-6">
+                                                <label for="ana" class="form-label"type="form-label" id="ana" name="ana" autofocus>ANA : </label>
+                                            </div>
+                                            <div class="mb-3 col-md-6 bg-label-secondary">
+                                                <label for="lkm" class="form-label"type="form-label" id="lkm" name="lkm" autofocus>LKM : </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="mb-3 col-md-6 bg-label-secondary">
+                                                <label for="tpo" class="form-label"type="form-label" id="tpo" name="tpo" autofocus>Anti_TPO : </label>
+                                            </div>
+                                            <div class="mb-3 col-md-6">
+                                                <label for="tiroglobulin" class="form-label"type="form-label" id="tiroglobulin" name="tiroglobulin" autofocus>Anti-Tiroglobulin : </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="mb-3 col-md-6">
+                                                <label for="transglutaminaz" class="form-label"type="form-label" id="transglutaminaz" name="transglutaminaz" autofocus>Anti-Transglutaminaz : </label>
+                                            </div>
+                                            <div class="mb-3 col-md-6 bg-label-secondary">
+                                                <label for="gliadin" class="form-label"type="form-label" id="gliadin" name="gliadin" autofocus>Anti-Gliadin : </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="mb-3 col-md-6 bg-label-secondary">
+                                                <label for="b" class="form-label"type="form-label" id="b" name="b" autofocus>B : </label>
+                                            </div>
+                                        </div>
+                      </form>
+                      
+                    </div>
+                  </div>
+                </div>
+               
+            </div>
+            <!-- / Content -->
+
+          

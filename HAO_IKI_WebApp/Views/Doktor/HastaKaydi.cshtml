@@ -1,0 +1,305 @@
+﻿@{
+    Layout = "_Mainlayout";
+}
+@model HAO_IKI_WebApp.Models.Hasta;
+
+
+
+
+<h4 class="fw-bold py-3 mb-4"><span class="" style="color:blueviolet">HASTA KAYDI </span> </h4>
+
+<div class="row ">
+    <div class="col-md-12 ">
+        <div class="my-custom-scrollbar my-custom-scrollbar-primary">
+
+
+            <ul class="nav nav-pills flex-column flex-md-row mb-3 " style="font-size: 12px">
+                <li class="nav-item">
+                    <a class="nav-link active" href="HastaKaydi"><i class="bx bx-user me-1"></i> İLK KAYIT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiDemografikVerilerIki"><i class="bx bx-bell me-1"></i> DEMOGRAFİK VERİLER</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiKomorbidite"><i class="bx bx-link-alt me-1"></i> KOMORBİDİDİTE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiKompleman"><i class="bx bx-link-alt me-1"></i> KOMPLEMAN</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiTiroidFonksiyonTestleri"><i class="bx bx-link-alt me-1"></i> TİROİD FONKSİYON TESTLERİ VE OTOANTİKOR</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiGenetik"><i class="bx bx-link-alt me-1"></i> GENETİK</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiHepatitSerolojisi"><i class="bx bx-link-alt me-1"></i> HEPATİT SEROLOJİSİ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiYanlisTani"><i class="bx bx-link-alt me-1"></i> YANLIŞ TANI</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiYasamBoyuAtakOzellikleri"><i class="bx bx-link-alt me-1"></i> YAŞAM BOYU ATAK ÖZELLİKLERİ</a>
+                </li>
+            </ul>
+        </div>
+        <div class="card mb-4">
+            <h5 class="card-header">Profile Details</h5>
+            <!-- Account -->
+
+            <hr class="my-0" />
+            <div class="card-body">
+                <form method="post" asp-controller="Doktor" asp-action="HastaKaydi" >
+                    <div class="row">
+                        <div class="mb-3 col-md-6">
+                            <label for="firstName" class="form-label">Adı-Soyadı</label>
+                            <input class="form-control"
+                                   type="text"
+                                   id="AdıSoyadı"
+                                   asp-for="AdSoyad" class="form-control" />
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            <label for="inputPassword" class="col-sm-6 col-form-label " style="margin-bottom:10px">CİNSİYET</label><br />
+
+                            <div class="form-check col-sm-1 form-check-inline" style="margin-left:0px">
+                                <input class="form-check-input" asp-for="Cinsiyet" type="radio"  value="1" id="cinsiyet1">
+                                <label class="form-check-label" for="inlineRadio5">Kadın</label>
+                            </div>
+                            <div class="form-check col-sm-1 form-check-inline" style="margin-left:70px">
+                                <input class="form-check-input" asp-for="Cinsiyet" type="radio"  value="2" id="cinsiyet2">
+                                <label class="form-check-label" for="inlineRadio6">Erkek</label>
+                            </div>
+                        </div>
+                        @*<div class="mb-3 col-md-6">
+                            <label>Tarih</label>
+                            <div class="col-md-10">
+                                <input class="form-control" type="text" id="datepicker" asp-for="DogumTarihi"  placeholder="aa-gg-yyyy"/>
+                            </div>
+                        </div>*@
+                        <div  class="mb-3 col-md-6" >
+                                <label for="html5-date-input" class="col-md-2 col-form-label">Tarih</label>
+                                <div class="col-md-10">
+                                    <input class="form-control" asp-for="DogumTarihi" type="date" id="DogumTarihi" />
+                                </div>
+                            </div>
+                        <div class="mb-3 col-md-6">
+                            <label for="DogumYeri" class="form-label">Doğum Yeri</label>
+                            <select id="DogumYeri" class="select2 form-select" asp-for="DogumYeri">
+                                 
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            <label class="form-label" for="Boy">Boy</label>
+                            <div class="input-group input-group-merge">
+                                <input type="text"
+                                       id="Boy"
+                                       asp-for="Boy" class="form-control"
+                                       placeholder="Örnek: 160" />
+                                       
+                                   
+                            </div>
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            <label class="form-label" for="Kilo">Kilo</label>
+                            <div class="input-group input-group-merge">
+                                <input type="text"
+                                       id="Kilo"
+                                       asp-for="Kilo" class="form-control"
+                                       placeholder="Örnek: 52" />
+                                       
+                                   
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="YasadıgıSehir" class="form-label">YAŞADIĞI ŞEHİR</label>
+                            <select id="YaşadıgıSehir" placeholder="Hastanın Yaşadığı Şehri Seçiniz" class="select2 form-select" asp-for="YasadigiSehir">
+
+                                <option value="en">İzmir</option>
+                                <option value="fr">Ankara</option>
+                                <option value="de">İstanbul</option>
+                                <option value="pt">Edirne</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 ">
+                            <label for="inputPassword" class="col-sm-6 col-form-label " style="margin-bottom:10px">ANJİYOÖDEM TİPİ</label>
+
+                            <div class="form-check col-sm-1 form-check-inline">
+                                <input class="form-check-input" asp-for="AnjiyoodemTipi" type="radio"  value="8" id="AnjiyoodemTipi1">
+                                <label class="form-check-label" for="AnjiyoodemTipi1">Tip 1</label>
+                            </div>
+                            <div class="form-check col-sm-1 form-check-inline">
+                                <input class="form-check-input" asp-for="AnjiyoodemTipi" type="radio"  value="9" id="AnjiyoodemTipi2">
+                                <label class="form-check-label" for="AnjiyoodemTipi2">Tip 2</label>
+                            </div>
+                            <div class="form-check col-sm-1 form-check-inline">
+                                <input class="form-check-input" asp-for="AnjiyoodemTipi" type="radio"  value="10" id="AnjiyoodemTipi3">
+                                <label class="form-check-label" for="AnjiyoodemTipi3">Tip 3</label>
+                            </div>
+                            <div class="form-check col-sm-1 form-check-inline">
+                                <input class="form-check-input" asp-for="AnjiyoodemTipi" type="radio"  value="11" id="AnjiyoodemTipi4">
+                                <label class="form-check-label" for="AnjiyoodemTipi4">Tip 4</label>
+                            </div>
+
+                        </div>
+                        <hr class="m-0" />
+                        <div class="row">
+                           <div class="mb-3 col-md-6">
+                            <label for="inputPassword" class="col-sm-6 col-form-label " style="margin-bottom:10px">ANNE-BABA AKRABALIĞI</label><br />
+
+                            <div class="form-check col-sm-1 form-check-inline" style="margin-left:0px">
+                                <input class="form-check-input" asp-for="AnneBabaAkrabalik" type="radio"  value="true" id="AnneBabaAkrabalıgı1" onclick=myFunc(AnneBabaAkrabalıgı1,DereceDiv)>
+                                <label class="form-check-label" for="AnneBabaAkrabalıgı1">Evet</label>
+                            </div>
+                            <div class="form-check col-sm-1 form-check-inline" style="margin-left:70px">
+                                <input class="form-check-input" asp-for="AnneBabaAkrabalik" type="radio"  value="false" id="AnneBabaAkrabalıgı2" onclick=myFunc(AnneBabaAkrabalıgı1,DereceDiv)>
+                                <label class="form-check-label" for="AnneBabaAkrabalıgı2">Hayır</label>
+                            </div>
+                            </div>
+                            <div id="DereceDiv" class="mb-3 col-md-6" style="display:none">
+                           <label for="Kilo" style="margin-bottom:10px" class="form-label">DERECESİ </label>
+                            <input type="text" class="form-control" asp-for="AnneBabaAkrabalikDerece" id="Derece"  placeholder="örnek: Amca kızı" />
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="inputPassword" class="col-sm-6 col-form-label " style="margin-bottom:10px">ANNEANNE-DEDE AKRABALIĞI</label><br />
+
+                                <div class="form-check col-sm-1 form-check-inline" style="margin-left:0px">
+                                    <input class="form-check-input" asp-for="AnneanneDedeAkrabalik" type="radio"  value="true" id="AnneanneDedeAkrabalıgı1">
+                                    <label class="form-check-label" for="AnneanneDedeAkrabalıgı1">Evet</label>
+                                </div>
+                                <div class="form-check col-sm-1 form-check-inline" style="margin-left:70px">
+                                    <input class="form-check-input" asp-for="AnneanneDedeAkrabalik" type="radio"  value="false" id="AnneanneDedeAkrabalıgı2">
+                                    <label class="form-check-label" for="AnneanneDedeAkrabalıgı2">Hayır</label>
+                                </div>
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputPassword" class="col-sm-6 col-form-label " style="margin-bottom:10px">AİLE ÖYKÜSÜ</label><br />
+
+                                <div class="form-check col-sm-1 form-check-inline" style="margin-left:0px">
+                                    <input class="form-check-input" asp-for="AileOykusu" type="radio"  value="true" id="AileOykusu1">
+                                    <label class="form-check-label" for="AileOykusu1">Evet</label>
+                                </div>
+                                <div class="form-check col-sm-1 form-check-inline" style="margin-left:70px">
+                                    <input class="form-check-input" asp-for="AileOykusu" type="radio"  value="false" id="AileOykusu2">
+                                    <label class="form-check-label" for="AileOykusu2">Hayır</label>
+                                </div>
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputPassword" class="col-sm-6 col-form-label " style="margin-bottom:10px">AİLEDE LARİNGEAL ATAĞA BAĞLI ÖLÜM</label><br />
+
+                                <div class="form-check col-sm-1 form-check-inline" style="margin-left:0px">
+                                    <input class="form-check-input" asp-for="AiledeLarengealAtagaBagliOlum" type="radio"  value="true" id="AiledeLarengialAtagaBaglıOlum1">
+                                    <label class="form-check-label" for="AiledeLarengialAtagaBaglıOlum1">Evet</label>
+                                </div>
+                                <div class="form-check col-sm-1 form-check-inline" style="margin-left:70px">
+                                    <input class="form-check-input" asp-for="AiledeLarengealAtagaBagliOlum" type="radio"  value="false" id="AiledeLarengialAtagaBaglıOlum2">
+                                    <label class="form-check-label" for="AiledeLarengialAtagaBaglıOlum2">Hayır</label>
+                                </div>
+
+                            </div>
+                            <div class="mb-3 col-md-6">
+                                <label class="form-label" for="SemptomBaslamaYasi">SEMPTOM BAŞLAMA YAŞI</label>
+                                <div class="input-group input-group-merge">
+                                    <input type="text"
+                                           id="SemptomBaslamaYasi"
+                                           class="form-control"
+                                           asp-for="SemptomBaslamaYili"
+                                           placeholder="Örnek: 32" />
+                                </div>
+                            </div>
+                            <div class="mb-3 col-md-4">
+                                <label class="form-label" for="TaniYasi">TANININ KOYULDUĞU YIL</label>
+                                <div class="input-group input-group-merge">
+                                    <input type="text"
+                                           id="TanininKoyulduguYil"
+                                           name="TanininKoyulduguYil"
+                                           class="form-control"
+                                           asp-for="TanininKoyulduguYil"
+                                           placeholder="Örnek: 2001" />
+                                </div>
+                            </div>
+                            <div class="mb-3 ">
+                                <label for="ÇalismaDurumu" class="col-sm-6 col-form-label " style="margin-bottom:10px">ÇALIŞMA DURUMU</label><br />
+
+                                <div class="form-check col-sm-1 form-check-inline" style="margin-left:0px">
+                                    <input class="form-check-input" asp-for="CalismaDurumu" type="radio"  value="5" id="CalismaDurumu1" >
+                                    <label class="form-check-label" for="CalismaDurumu1">İzlemde</label>
+                                </div>
+                                <div class="form-check col-sm-1 form-check-inline" style="margin-left:30px">
+                                    <input class="form-check-input" asp-for="CalismaDurumu" type="radio"  value="6" id="CalismaDurumu2">
+                                    <label class="form-check-label" for="ÇalismaDurumu2">İzlem Kaybı</label>
+                                </div>
+                                <div class="form-check col-sm-1 form-check-inline" style="margin-left:30px">
+                                    <input class="form-check-input" asp-for="CalismaDurumu" type="radio"  value="7" id="CalismaDurumu3">
+                                    <label class="form-check-label" for="CalismaDurumu3">Çalışmadan Ayrıldı</label>
+                                </div>
+
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="inputPassword" class="col-sm-6 col-form-label " style="margin-bottom:10px">HASTA SON DURUM</label><br />
+
+                                <div class="form-check col-sm-1 form-check-inline" style="margin-left:0px">
+                                    <input class="form-check-input" asp-for="HastaSonDurum" type="radio"  value="3" id="HastaSonDurum1" onclick=myFunc(HastaSonDurum2,OlumTarihiDiv)>
+                                    <label class="form-check-label" for="HastaSonDurum1">Sağ</label>
+                                </div>
+                                <div class="form-check col-sm-1 form-check-inline" style="margin-left:70px">
+                                    <input class="form-check-input" asp-for="HastaSonDurum" type="radio"  value="4" id="HastaSonDurum2" onclick=myFunc(HastaSonDurum2,OlumTarihiDiv)>
+                                    <label class="form-check-label" for="HastaSonDurum2">Ölü</label>
+                                </div>
+
+                            </div>
+                            <div id="OlumTarihiDiv" class="mb-3 col-md-6" style="display:none">
+                                <label for="html5-date-input" class="col-md-2 col-form-label">ÖLÜM TARİHİ</label>
+                                <div class="col-md-10">
+                                    <input class="form-control" asp-for="HastaSonDurumOlumTarihi" type="date" id="OlumTarihi" />
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="mt-2">
+                            <button type="submit" class="btn btn-primary me-2">Kaydet</button>
+                            <button type="reset" class="btn btn-outline-secondary">Vazgeç</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- /Account -->
+        </div>
+    </div>
+</div>
+
+<!-- / Content -->
+
+
+
+<div class="content-backdrop fade"></div>
+
+
+<!-- Overlay -->
+<div class="layout-overlay layout-menu-toggle"></div>
+
+<!-- / Layout wrapper -->
+<!-- Core JS -->
+<!-- build:js assets/vendor/js/core.js -->
+<script src="~/dist/assets/vendor/libs/jquery/jquery.js"></script>
+<script src="~/dist/assets/vendor/libs/popper/popper.js"></script>
+<script src="~/dist/assets/vendor/js/bootstrap.js"></script>
+<script src="~/dist/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+<script src="~/dist/assets/vendor/js/menu.js"></script>
+<!-- endbuild -->
+<!-- Vendors JS -->
+<!-- Main JS -->
+<script src="~/dist/assets/js/main.js"></script>
+
+<!-- Page JS -->
+<script src="~/dist/assets/js/pages-account-settings-account.js"></script>
+
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+

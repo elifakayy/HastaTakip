@@ -1,0 +1,173 @@
+﻿@{
+    Layout = "_Mainlayout";
+}
+                    <h4 class="fw-bold py-3 mb-4">
+                        <span class="text-muted fw-light">Hasta Profili </span>
+                    </h4>
+
+
+                    <!-- Header -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card mb-4">
+
+                                <div class="user-profile-header d-flex flex-column flex-sm-row text-sm-start text-center mb-4">
+
+                                    <div class="flex-grow-1 mt-3 mt-sm-3">
+                                        <div class="d-flex align-items-md-end align-items-sm-start align-items-center justify-content-md-between justify-content-start mx-4 flex-md-row flex-column gap-4">
+                                            <div class="user-profile-info">
+                                                <h4>AYŞE NUR</h4>
+                                                <ul class="list-inline mb-0 d-flex align-items-center flex-wrap justify-content-sm-start justify-content-center gap-2">
+                                                    
+                                                    <li class="list-inline-item fw-semibold">
+														<i class="">Yaş : </i> 38
+													</li>
+                                                    <li class="list-inline-item fw-semibold">
+                                                        <i>Cinsiyet : </i> Kadın
+                                                    </li>
+                                                    <li class="list-inline-item fw-semibold">
+                                                        <i> Anjio Ödem Tipi : </i> 1
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <a href="Kontroller" class="btn btn-primary text-nowrap" style="margin-left:0px; margin-right:0px; ">
+                                                <i class='bx bx-user-check'></i> Kontroller
+                                            </a>
+                                            
+                                            <a href="javascript:void(0)" class="btn btn-primary text-nowrap">
+                                                <i class='bx bx-user-check'></i> Hastayı Ata
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Header -->
+
+                  <div class="row ">
+                <div  class="col-md-12 ">
+                  <div class="my-custom-scrollbar my-custom-scrollbar-primary">
+
+
+                                <ul class="nav nav-pills flex-column flex-md-row mb-3 " style="font-size: 12px">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="DemografikVeriler"><i class="bx bx-user me-1"></i> DEMOGRAFİK VERİLER 1</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="DemografikVerilerIki"><i class="bx bx-bell me-1"></i> DEMOGRAFİK VERİLER 2</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="Komorbidite"><i class="bx bx-link-alt me-1"></i> KOMORBİDİTE</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="Kompleman"><i class="bx bx-link-alt me-1"></i> KOMPLEMAN</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="TiroidFonksiyonTestleri"><i class="bx bx-link-alt me-1"></i> TİROİD FONKSİYON TESTLERİ VE OTOANTİKOR</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="Genetik"><i class="bx bx-link-alt me-1"></i> GENETİK</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="HepatitSerolojisi"><i class="bx bx-link-alt me-1"></i> HEPATİT SEROLOJİSİ</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="YanlisTani"><i class="bx bx-link-alt me-1"></i> YANLIŞ TANI</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="YasamBoyuAtakOzellikleri"><i class="bx bx-link-alt me-1"></i> YAŞAM BOYU ATAK ÖZELLİKLERİ</a>
+                                    </li>
+                                </ul>
+                            </div>
+                  
+                </div>
+              </div>
+       
+              <h4 class="fw-bold py-3 mb-4">
+                <span>HASTA BİLGİLERİ</span> 
+              </h4>
+
+
+              <div class="row">
+                <!-- Vertical Scrollbar -->
+                <div class="col-md-12 col-sm-12">
+                  <div class="card overflow-auto mb-12" style="height: 400px">
+                    <h5 class="card-header">DEMOGRAFİK VERİLER 2</h5>
+                    <div class="card-body" id="vertical-example">
+                      <form id="formAccountSettings" method="POST" onsubmit="return false">
+                          <hr />
+                                        <div class="row">
+                                            <div class="mb-3 col-md-6 bg-label-secondary">
+                                                <label for="medeniDurum" class="form-label"type="form-label" id="medeniDurum" name="medeniDurum" autofocus>Medeni Durum : </label>
+                                            </div>
+                                            <div class="mb-3 col-md-6">
+                                                <label for="meslek" class="form-label"type="form-label" id="meslek" name="meslek" autofocus>Meslek : </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="mb-3 col-md-6">
+                                                <label for="egitimDurumu" class="form-label"type="form-label" id="egitimDurumu" name="egitimDurumu" autofocus>Eğitim Durumu : </label>
+                                            </div>
+                                            <div class="mb-3 col-md-6">
+                                                <label for="aktifCinselHayat" class="form-label"type="form-label" id="aktifCinselHayat" name="aktifCinselHayat" autofocus>Aktif Cinsel Hayatınız Var mı? : </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="mb-3 col-md-6 bg-label-secondary">
+                                                <label for="sigaraKullanimi" class="form-label"type="form-label" id="sigaraKullanimi" name="sigaraKullanimi" autofocus>Sigara Kullanımı : </label>
+                                            </div>
+                                            <div class="mb-3 col-md-6">
+                                                <label for="sigaraKullanimSikligi" class="form-label"type="form-label" id="sigaraKullanimSikligi" name="sigaraKullanimSikligi" autofocus>Sigara Kullanım Sıklığı : </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="mb-3 col-md-6">
+                                                <label for="alkolKullanimi" class="form-label"type="form-label" id="alkolKullanimi" name="alkolKullanimi" autofocus>Alkol Kullanımı : </label>
+                                            </div>
+                                            <div class="mb-3 col-md-6 bg-label-secondary">
+                                                <label for="alkolKullanimSikligi" class="form-label"type="form-label" id="alkolKullanimSikligi" name="alkolKullanimSikligi" autofocus>Alkol Kullanım Sıklığı : </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="mb-3 col-md-6 bg-label-secondary">
+                                                <label for="egzersiz" class="form-label"type="form-label" id="egzersiz" name="egzersiz" autofocus>Egzersiz : </label>
+                                            </div>
+                                            <div class="mb-3 col-md-6">
+                                                <label for="egzersizTuru" class="form-label"type="form-label" id="egzersizTuru" name="egzersizTuru" autofocus>Egzersiz Türü : </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="mb-3 col-md-6">
+                                                <label for="egzersizGunSayisi" class="form-label"type="form-label" id="egzersizGunSayisi" name="egzersizGunSayisi" autofocus>Haftada Kaç Gün Egzersiz Yaparsınız? : </label>
+                                            </div>
+                                            <div class="mb-3 col-md-6 bg-label-secondary">
+                                                <label for="egzersizSaati" class="form-label"type="form-label" id="egzersizSaati" name="egzersizSaati" autofocus>Haftada Toplam Kaç Saat Egzersiz Yaparsınız? : </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="mb-3 col-md-6 bg-label-secondary">
+                                                <label for="hissiyat" class="form-label"type="form-label" id="hissiyat" name="hissiyat" autofocus>Kendinizi Ne Sıklıkla Çökkün, Üzgün, Mutsuz, Umutsuz Hissettiniz? : </label>
+                                            </div>
+                                            <div class="mb-3 col-md-6">
+                                                <label for="taniYasi" class="form-label"type="form-label" id="taniYasi" name="taniYasi" autofocus>Tanı Yaşı : </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="mb-3 col-md-6">
+                                                <label for="gergin" class="form-label"type="form-label" id="gergin" name="gergin" autofocus>Kendinizi Ne Sıklıkta Gergin, Huzursuz, Endişeli Hissettiniz? : </label>
+                                            </div>
+                                            <div class="mb-3 col-md-6 bg-label-secondary">
+                                                <label for="uykusuzluk" class="form-label"type="form-label" id="uykusuzluk" name="uykusuzluk" autofocus>Kaç Gün Uykusuzluk Ya Da Gün İçinde Uykulu Olma Hali Yaşadınız? : </label>
+                                            </div>
+                                        </div>
+                      </form>
+                      
+                    </div>
+                  </div>
+                </div>
+               
+            </div>
+            <!-- / Content -->
+
+          

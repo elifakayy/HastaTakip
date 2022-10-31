@@ -1,0 +1,75 @@
+﻿@using Newtonsoft.Json
+@*@model List<Moduller>*@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Sidebar 01</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <ul class="nav">
+            @*List<dynamic> models = JsonConvert.DeserializeObject<List<dynamic>>(jsonString);*@
+            @{
+                var menu = Helper.GetMenu(Html.ViewContext.HttpContext.Session);
+            }
+            @foreach (Moduller item in menu)
+            {
+                @if (item.UstModul == null)
+                {
+                    <li id="@item.Id"></li>
+
+
+                    @if (item.AcilabilirMenu == false)
+                    {
+
+                        <li class="menu-item">
+                            <a href="@item.Adres" class="menu-link">
+                                <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                                <div data-i18n="Analytics">@item.Adi</div>
+                            </a>
+                        </li>
+
+                    }
+                    else
+                    {
+                        <li class="menu-item">
+                            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                                <i class="menu-icon tf-icons bx bx-layout"></i>
+                                <div data-i18n="Layouts">@item.Adi</div>
+                            </a>
+                            <ul class="menu-sub">
+                                @foreach (Moduller subitem in menu)
+                                {
+
+
+                                    @if (@item.Id == @subitem.UstModul)
+                                    {
+                                        <li class="menu-item">
+                                            <a href="@subitem.Adres" class="menu-link">
+                                                <div data-i18n="Without menu">@subitem.Adi</div>
+                                            </a>
+                                        </li>
+
+                                    }
+
+
+                                }
+                            </ul>
+                        </li>
+                   }
+
+                }
+            }
+        </ul>
+    </div>
+</body>
+</html>

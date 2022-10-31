@@ -1,0 +1,231 @@
+﻿@{
+    Layout = "_Mainlayout";
+}
+
+@model HAO_IKI_WebApp.Models.TiroidFonksiyonlari
+
+
+<h4 class="fw-bold py-3 mb-4"><span class="" style="color:blueviolet">HASTA KAYDI </span> </h4>
+
+<div class="row ">
+    <div class="col-md-12 ">
+        <div class="my-custom-scrollbar my-custom-scrollbar-primary">
+
+
+            <ul class="nav nav-pills flex-column flex-md-row mb-3 " style="font-size: 12px">
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydi"><i class="bx bx-user me-1"></i> İLK KAYIT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiDemografikVerilerIki"><i class="bx bx-bell me-1"></i> DEMOGRAFİK VERİLER</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiKomorbidite"><i class="bx bx-link-alt me-1"></i> KOMORBİDİTE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiKompleman"><i class="bx bx-link-alt me-1"></i> KOMPLEMAN</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="HastaKaydiTiroidFonksiyonTestleri"><i class="bx bx-link-alt me-1"></i> TİROİD FONKSİYON TESTLERİ VE OTOANTİKOR</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiGenetik"><i class="bx bx-link-alt me-1"></i> GENETİK</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiHepatitSerolojisi"><i class="bx bx-link-alt me-1"></i> HEPATİT SEROLOJİSİ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiYanlisTani"><i class="bx bx-link-alt me-1"></i> YANLIŞ TANI</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiYasamBoyuAtakOzellikleri"><i class="bx bx-link-alt me-1"></i> YAŞAM BOYU ATAK ÖZELLİKLERİ</a>
+                </li>
+            </ul>
+        </div>
+        <div class="card mb-4">
+            <h5 class="card-header">TİROİD FONKSİYON TESTLERİ VE OTOANTİKOR</h5>
+            <!-- Account -->
+
+            <hr class="my-0" />
+            <div class="card-body ">
+
+                <form method="post" asp-controller="Doktor" asp-action="HastaKaydiTiroidFonksiyonTestleri">
+
+                    <div class="mb-6 row">
+                        <label class="col-sm-12 col-form-label" style=" margin-bottom:10px">TSH</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" asp-for="TSHDuzey" id="TshDüzey" placeholder="Düzey">
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" asp-for="TSHBirim" id="TshBirim" placeholder="Birim">
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" asp-for="TSHReferansBaslangic" id="TshRefBas" placeholder="Tsh Referans Başlangıç">
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" asp-for="TSHReferansBitis" id="TshRefBit" placeholder="Tsh Referans Bitiş">
+                        </div>
+                    </div>
+                    <div class="mb-6 row">
+                        <label class="col-sm-12 col-form-label" style=" margin-bottom:10px">FT4</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" asp-for="FT4Duzey" id="Ft4Düzey" placeholder="Düzey">
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" asp-for="FT4Birim" id="Ft4Birim" placeholder="Birim">
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" asp-for="FT4ReferansBaslangic" id="TshRefBas" placeholder="Ft4 Referans Başlangıç">
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" asp-for="FT4ReferansBitis" id="TshRefBit" placeholder="Ft4 Referans Bitiş">
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <label for="inputPassword" class="col-sm-6 col-form-label " style="margin-bottom:10px">ANA</label>
+
+                        <div class="form-check col-sm-1 form-check-inline" style="margin-left:30px">
+                            <input class="form-check-input" type="radio" asp-for="ANA" value="true" id="Ana1">
+                            <label class="form-check-label" for="Ana1">Pozitif</label>
+                        </div>
+                        <div class="form-check col-sm-1 form-check-inline" style="margin-left:70px">
+                            <input class="form-check-input" type="radio" asp-for="ANA" value="false" id="Ana2">
+                            <label class="form-check-label" for="Ana2">Negatif</label>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <label for="inputPassword" class="col-sm-6 col-form-label " style="margin-bottom:10px">LKM</label>
+
+                        <div class="form-check col-sm-1 form-check-inline" style="margin-left:30px">
+                            <input class="form-check-input" type="radio" asp-for="LKM" value="true" id="Lkm1">
+                            <label class="form-check-label" for="Lkm1">Pozitif</label>
+                        </div>
+                        <div class="form-check col-sm-1 form-check-inline" style="margin-left:70px">
+                            <input class="form-check-input" type="radio" asp-for="LKM" value="false" id="Lkm2">
+                            <label class="form-check-label" for="Lkm2">Negatif</label>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <label class="col-sm-6 col-form-label " style="margin-bottom:10px">ANTİ-TPO</label>
+
+                        <div class="form-check col-sm-1 form-check-inline" style="margin-left:30px">
+                            <input class="form-check-input" type="radio" asp-for="AntiTPO" value="true" id="inlineRadio1">
+                            <label class="form-check-label" for="inlineRadio1">Pozitif</label>
+                        </div>
+                        <div class="form-check col-sm-1 form-check-inline" style="margin-left:70px">
+                            <input class="form-check-input" type="radio" asp-for="AntiTPO" value="false" id="inlineRadio2">
+                            <label class="form-check-label" for="inlineRadio2">Negatif</label>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <label class="col-sm-6 col-form-label " style="margin-bottom:10px">ANTİ-Tiroglobulin</label>
+
+                        <div class="form-check col-sm-1 form-check-inline" style="margin-left:30px">
+                            <input class="form-check-input" type="radio" asp-for="AntiTiroglobulin" value="true" id="inlineRadio1">
+                            <label class="form-check-label" for="inlineRadio1">Pozitif</label>
+                        </div>
+                        <div class="form-check col-sm-1 form-check-inline" style="margin-left:70px">
+                            <input class="form-check-input" type="radio" asp-for="AntiTiroglobulin" value="false" id="inlineRadio2">
+                            <label class="form-check-label" for="inlineRadio2">Negatif</label>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <label class="col-sm-6 col-form-label " style="margin-bottom:10px">ANTİ-Transglutaminaz</label>
+
+                        <div class="form-check col-sm-1 form-check-inline" style="margin-left:30px">
+                            <input class="form-check-input" type="radio" asp-for="AntiTransglutaminaz" value="true" id="inlineRadio1">
+                            <label class="form-check-label" for="inlineRadio1">Pozitif</label>
+                        </div>
+                        <div class="form-check col-sm-1 form-check-inline" style="margin-left:70px">
+                            <input class="form-check-input" type="radio" asp-for="AntiTransglutaminaz" value="false" id="inlineRadio2">
+                            <label class="form-check-label" for="inlineRadio2">Negatif</label>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <label class="col-sm-6 col-form-label " style="margin-bottom:10px">ANTİ-Gliadin</label>
+
+                        <div class="form-check col-sm-1 form-check-inline" style="margin-left:30px">
+                            <input class="form-check-input" type="radio" asp-for="AntiGliadin" value="true" id="inlineRadio1">
+                            <label class="form-check-label" for="inlineRadio1">Pozitif</label>
+                        </div>
+                        <div class="form-check col-sm-1 form-check-inline" style="margin-left:70px">
+                            <input class="form-check-input" type="radio" asp-for="AntiGliadin" value="false" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Negatif</label>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <label class="col-sm-6 col-form-label " style="margin-bottom:10px">ANTİ-Endomisyum</label>
+
+                        <div class="form-check col-sm-1 form-check-inline" style="margin-left:30px">
+                            <input class="form-check-input" type="radio" asp-for="AntiEndomisyum" value="true" id="inlineRadio1">
+                            <label class="form-check-label" for="inlineRadio1">Pozitif</label>
+                        </div>
+                        <div class="form-check col-sm-1 form-check-inline" style="margin-left:70px">
+                            <input class="form-check-input" type="radio" asp-for="AntiEndomisyum" value="false" id="inlineRadio2">
+                            <label class="form-check-label" for="inlineRadio2">Negatif</label>
+                        </div>
+
+                    </div>
+                    <div class="mb-6 col-md-6">
+                        <label for="html5-date-input" class="col-md-2 col-form-label">Tarih</label>
+
+                        <div class="col-md-6">
+                
+                            <input class="form-control" type="date" asp-for="Tarih" id="Tarih">
+                        </div>
+                        
+
+                    </div>
+
+                    <div class="mt-2">
+                        <button type="submit" class="btn btn-primary me-2">Kaydet</button>
+                        <button type="reset" class="btn btn-outline-secondary">Vazgeç</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /Account -->
+        </div>
+
+    </div>
+</div>
+                </div>
+<!-- / Content -->
+
+
+
+<div class="content-backdrop fade"></div>
+
+<!-- Overlay -->
+<div class="layout-overlay layout-menu-toggle"></div>
+
+<!-- / Layout wrapper -->
+<!-- Core JS -->
+<!-- build:js assets/vendor/js/core.js -->
+<script src="~/dist/assets/vendor/libs/jquery/jquery.js"></script>
+<script src="~/dist/assets/vendor/libs/popper/popper.js"></script>
+<script src="~/dist/assets/vendor/js/bootstrap.js"></script>
+<script src="~/dist/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+<script src="~/dist/assets/vendor/js/menu.js"></script>
+<!-- endbuild -->
+<!-- Vendors JS -->
+<!-- Main JS -->
+<script src="~/dist/assets/js/main.js"></script>
+
+<!-- Page JS -->
+<script src="~/dist/assets/js/pages-account-settings-account.js"></script>
+
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+

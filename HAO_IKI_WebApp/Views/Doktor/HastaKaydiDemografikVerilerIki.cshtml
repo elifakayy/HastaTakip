@@ -1,0 +1,502 @@
+﻿@{
+    Layout = "_Mainlayout";
+}
+
+
+
+
+<h4 class="fw-bold py-3 mb-4"><span class="" style="color:blueviolet">HASTA KAYDI </span> </h4>
+
+<div class="row ">
+    <div class="col-md-12 ">
+        <div class="my-custom-scrollbar my-custom-scrollbar-primary">
+
+
+            <ul class="nav nav-pills flex-column flex-md-row mb-3 " style="font-size: 12px">
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydi"><i class="bx bx-user me-1"></i> İLK KAYIT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="HastaKaydiDemografikVerilerIki"><i class="bx bx-bell me-1"></i> DEMOGRAFİK VERİLER</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiKomorbidite"><i class="bx bx-link-alt me-1"></i> KOMORBİDİDİTE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiKompleman"><i class="bx bx-link-alt me-1"></i> KOMPLEMAN</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiTiroidFonksiyonTestleri"><i class="bx bx-link-alt me-1"></i> TİROİD FONKSİYON TESTLERİ VE OTOANTİKOR</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiGenetik"><i class="bx bx-link-alt me-1"></i> GENETİK</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiHepatitSerolojisi"><i class="bx bx-link-alt me-1"></i> HEPATİT SEROLOJİSİ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiYanlisTani"><i class="bx bx-link-alt me-1"></i> YANLIŞ TANI</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiYasamBoyuAtakOzellikleri"><i class="bx bx-link-alt me-1"></i> YAŞAM BOYU ATAK ÖZELLİKLERİ</a>
+                </li>
+            </ul>
+        </div>
+        <div class="card mb-4">
+            <h5 class="card-header">DEMOGRAFİKK VERİLER</h5>
+            <!-- Account -->
+
+            <hr class="my-0" />
+            <div class="card-body">
+                <form id="formAccountSettings" method="POST" onsubmit="return false">
+                    <div class="row">
+                        <div class="mb-3 col-md-6">
+                            <fieldset style="border: inset">
+                                <legend style="font-size:medium; margin-left:10px">MEDENİ DURUM</legend>
+                                <label id="MedeniDurum1" style="margin-left:10px">
+                                    <input type="radio" name="MedeniDurum" onclick=myFunc(CokEsli,CokEsliDiv) />
+                                    <span>Hiç Evlenmemiş</span>
+                                </label>
+                                <br />
+                                <label id="MedeniDurum2" style="margin-left:10px">
+                                    <input type="radio" name="MedeniDurum" onclick=myFunc(CokEsli,CokEsliDiv) />
+                                    <span>Eşle birlikte yaşama (Kanunlara göre evli)</span>
+                                </label>
+                                <br />
+                                <label id="MedeniDurum3" style="margin-left:10px">
+                                    <input type="radio" name="MedeniDurum" onclick=myFunc(CokEsli,CokEsliDiv) />
+                                    <span>Eşli ile yaşayan (Yalnızca dini kurallara göre evli)</span>
+                                </label>
+                                <br />
+
+                                <label id="MedeniDurum4" style="margin-left:10px">
+                                    <input id="CokEsli" type="radio" name="MedeniDurum" onclick=myFunc(CokEsli,CokEsliDiv) />
+                                    <span>Çok eşli (Yalnızca din kurallarına göre evli)</span>
+                                </label>
+                                <div id="CokEsliDiv" style="display:none">
+                                    <br />
+
+                                    <label style="margin-left:30px">Eşinizin başka imam nikahlı eşleri var mı?</label>
+                                    <div>
+                                        <input style="margin-left:35px" type="radio" id="AktifCinselHayat1"
+                                               name="AktifCinselHayat" value="email">
+                                        <label for="AktifCinselHayat1">Evet</label>
+                                        <input style="margin-left:35px" type="radio" id="AktifCinselHayat2"
+                                               name="AktifCinselHayat" value="email">
+                                        <label for="AktifCinselHayat2">Hayır</label>
+
+                                    </div>
+                                </div>
+                                <br />
+                                <label id="MedeniDurum5" style="margin-left:10px">
+                                    <input type="radio" name="MedeniDurum" onclick=myFunc(CokEsli,CokEsliDiv) />
+                                    <span>Partner ile birlikte yaşama (Evlenmemiş)</span>
+                                </label>
+                                <br />
+                                <label id="MedeniDurum6" style="margin-left:10px">
+                                    <input type="radio" name="MedeniDurum" onclick=myFunc(CokEsli,CokEsliDiv) />
+                                    <span>Dul</span>
+                                </label>
+                                <br />
+                                <label id="MedeniDurum7" style="margin-left:10px">
+                                    <input type="radio" name="MedeniDurum" onclick=myFunc(CokEsli,CokEsliDiv) />
+                                    <span>Boşanmış</span>
+                                </label>
+                                <br />
+                                <label id="MedeniDurum8" style="margin-left:10px">
+                                    <input type="radio" name="MedeniDurum" onclick=myFunc(CokEsli,CokEsliDiv) />
+                                    <span>Ayrı</span>
+                                </label>
+                                <br />
+                                <label id="MedeniDurum8" style="margin-left:10px">
+                                    <input type="radio" name="MedeniDurum" onclick=myFunc(CokEsli,CokEsliDiv) />
+                                    <span>Bilinmiyor</span>
+                                </label>
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+
+
+                            </fieldset>
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            <fieldset style="border: inset">
+                                <legend style="font-size:medium; margin-left:10px">MESLEK (Birden fazla seçilebilir)</legend>
+                                <label id="Meslek1" style="margin-left:10px">
+                                    <input type="checkbox" name="color" />
+                                    <span>Devlet Memuru</span>
+                                </label>
+                                <br />
+
+                                <label id="Meslek21" style="margin-left:10px" onclick=myFunc(me,Meslek22)>
+                                    <input id="me" type="checkbox" name="Meslek" />
+                                    <span> Özel sektör çalışanı (Belirtiniz)</span>
+                                    <input style="display:none" id="Meslek22" type="text" name="Meslek" placeholder="Belirtiniz" />
+                                </label>
+
+                                <br>
+                                <label id="Meslek3" style="margin-left:10px">
+                                    <input type="checkbox" name="Meslek" />
+                                    <span>İşçi</span>
+                                </label>
+                                <br />
+
+                                <labe id="Meslek4" style="margin-left:10px" l>
+                                    <input type="checkbox" name="Meslek" />
+                                    <span>Çiftçi</span>
+                                </labe>
+                                <br />
+                                <label id="Meslek5" style="margin-left:10px">
+                                    <input type="checkbox" name="Meslek" />
+                                    <span>Kendi İşi</span>
+                                </label>
+                                <br />
+                                <label id="Meslek6" style="margin-left:10px">
+                                    <input type="checkbox" name="Meslek" />
+                                    <span>Ev Hanımı</span>
+                                </label>
+                                <br />
+                                <label id="Meslek7" style="margin-left:10px">
+                                    <input type="checkbox" name="Meslek" />
+                                    <span>Emekli</span>
+                                </label>
+                                <br />
+                                <label id="Meslek8" style="margin-left:10px">
+                                    <input type="checkbox" name="Meslek" />
+                                    <span>İşsiz(Çalışabilir)</span>
+                                </label>
+                                <br />
+                                <label id="Meslek9" style="margin-left:10px">
+                                    <input type="checkbox" name="Meslek" />
+                                    <span>İşsiz (Çalışamaz)</span>
+                                </label>
+                                <br />
+                                <label id="Meslek10" style="margin-left:10px">
+                                    <input type="checkbox" name="Meslek" />
+                                    <span>Öğrenci</span>
+                                </label>
+                                <br />
+                                <label id="Meslek11" style="margin-left:10px">
+                                    <span>Diğer(Belirtiniz)</span>
+                                    <input type="text" name="Meslek" />
+
+                                </label>
+                                <br />
+                                <br />
+
+
+
+                            </fieldset>
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            <fieldset style="border: inset">
+                                <div class="mb-3">
+                                    <label class="col-sm-6" style="font-size:medium;margin-bottom:10px;margin-left:10px">ALKOL KULLANIMI</label><br />
+
+                                    <div class="form-check col-sm-1 form-check-inline" style="margin-left:10px">
+                                        <input class="form-check-input" type="radio" name="AlkolKullanimi" id="AlkolKullanimi1" onclick=myFunc(AlkolKullanimi1,AlkolKullanimSikligiDiv)>
+                                        <label class="form-check-label" for="AlkolKullanimi1">Evet</label>
+                                    </div>
+                                    <div class="form-check col-sm-1 form-check-inline" style="margin-left:10px">
+                                        <input class="form-check-input" type="radio" name="AlkolKullanimi" id="AlkolKulllanimi2" onclick=myFunc(AlkolKullanimi1,AlkolKullanimSikligiDiv)>
+                                        <label class="form-check-label" for="AlkolKullanimi2">Hayır</label>
+                                    </div>
+                                </div>
+                                <br />
+                                <div id="AlkolKullanimSikligiDiv" class="mb-3" style="display:none">
+
+                                    <label style="margin-left:10px">ALKOL KULLANIM SIKLIĞI</label> <br /> <br />
+                                    <label style="margin-left:10px">
+                                        <input type="radio" name="AlkolKullanimSikligi" />
+                                        <span>Ayda birden az</span>
+                                    </label>
+                                    <br />
+                                    <label style="margin-left:10px">
+                                        <input type="radio" name="AlkolKullanimSikligi" />
+                                        <span>Ayda 1-3 kez</span>
+                                    </label>
+                                    <br />
+                                    <label style="margin-left:10px">
+                                        <input type="radio" name="AlkolKullanimSikligi" />
+                                        <span>Haftada 1 kez </span>
+                                    </label>
+                                    <br />
+
+                                    <label style="margin-left:10px">
+                                        <input type="radio" name="AlkolKullanimSikligi" />
+                                        <span>Haftada 2-3 kez</span>
+                                    </label>
+                                    <br />
+                                    <label style="margin-left:10px">
+                                        <input type="radio" name="AlkolKullanimSikligi" />
+                                        <span>Haftada 4-5 kez</span>
+                                    </label>
+                                    <br />
+                                    <label style="margin-left:10px">
+                                        <input type="radio" name="AlkolKullanimSikligi" />
+                                        <span>Hergün </span>
+                                    </label>
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+
+
+
+                                </div>
+
+                            </fieldset>
+                        </div>
+
+                        <div class="mb-3 col-md-6">
+                            <fieldset style="border:inset">
+                                <legend style="margin-left:10px; font-size:medium">SİGARA KULLANIMI</legend>
+                                <div>
+                                    <input class="form-check-input" style="margin-left:10px" type="radio" id="SigaraKulanimi1"
+                                           name="SigaraKullanimi" onclick=myFunc(SigaraKulanimi1,SigaraKullanimSikligi)>
+                                    <label for="SigaraKulanimi1">İçiyor</label>
+                                    <input class="form-check-input" style="margin-left:10px" type="radio" id="SigaraKulanimi2"
+                                           name="SigaraKullanimi" onclick=myFunc(SigaraKulanimi1,SigaraKullanimSikligi)>
+                                    <label for="SigaraKulanimi2">Eski İçici</label>
+                                    <input class="form-check-input" style="margin-left:10px" type="radio" id="SigaraKulanimi3"
+                                           name="SigaraKullanimi" onclick=myFunc(SigaraKulanimi1,SigaraKullanimSikligi)>
+                                    <label for="SigaraKulanimi3">Hiç İçmemiş</label>
+                                    <input class="form-check-input" style="margin-left:10px" type="radio" id="SigaraKulanimi4"
+                                           name="SigaraKullanimi" onclick=myFunc(SigaraKulanimi1,SigaraKullanimSikligi)>
+                                    <label for="SigaraKulanimi4">Bilinmiyor</label>
+                                </div>
+                                <br />
+
+                                <div id="SigaraKullanimSikligi" class="mb-3" style="display:none">
+                                    <label for="SigaraGundeKacAdet" class="form-label" style="margin-left:10px; font-size:medium">SİGARA KULLANIM SIKLIĞI</label>
+                                    <input style="margin-left:10px" type="text" class="form-control" id="SigaraGundeKacAdet" name="SigaraGundeKacAdet" placeholder="Günde Kaç Adet" />
+                                </div>
+
+                            </fieldset>
+
+
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            <fieldset style="border: inset">
+                                <legend style="font-size:medium; margin-left:10px">EĞİTİM DURUMU</legend>
+                                <label id="EgitimDurumu1" style="margin-left:10px">
+                                    <input type="radio" name="EgitimDurumu" />
+                                    <span>Okur-Yazar Değil</span>
+                                </label>
+                                <br />
+                                <label id="EgitimDurumu2" style="margin-left:10px">
+                                    <input type="radio" name="EgitimDurumu" />
+                                    <span>Okur-Yazar</span>
+                                </label>
+                                <br />
+                                <label id="EgitimDurumu3" style="margin-left:10px">
+                                    <input type="radio" name="EgitimDurumu" />
+                                    <span>İlköğretim</span>
+                                </label>
+                                <br />
+
+                                <label id="EgitimDurumu4" style="margin-left:10px">
+                                    <input type="radio" name="EgitimDurumu" />
+                                    <span>Lise</span>
+                                </label>
+                                <br />
+                                <label id="EgitimDurumu5" style="margin-left:10px">
+                                    <input type="radio" name="EgitimDurumu" />
+                                    <span>Lisans</span>
+                                </label>
+                                <br />
+                                <label id="EgitimDurumu6" style="margin-left:10px">
+                                    <input type="radio" name="EgitimDurumu" />
+                                    <span>Lisansüstü</span>
+                                </label>
+                                <br />
+                                <label id="EgitimDurumu7" style="margin-left:10px">
+                                    <input type="radio" name="color" />
+                                    <span>Bilinmiyor</span>
+                                </label>
+
+                            </fieldset>
+                        </div>
+
+
+                        <div class="mb-3  col-md-6">
+                            <fieldset style="border: inset">
+                                <legend style="font-size:medium; margin-left:10px">EGZERSİZ</legend>
+                                <br />
+                                <legend style="font-size:medium;margin-left:10px">DÜZENLİ EGZERSİZ</legend>
+                                <div>
+                                    <input style="margin-left:10px" type="radio" id="DuzenliEgzersiz1"
+                                           name="DuzenliEgzersiz" onclick=myFunc(DuzenliEgzersiz1,EgzersizGenelDiv)>
+                                    <label for="DuzenliEgzersiz1">Evet</label>
+                                    <input style="margin-left:10px" type="radio" id="DuzenliEgzersiz2"
+                                           name="DuzenliEgzersiz" onclick=myFunc(DuzenliEgzersiz1,EgzersizGenelDiv)>
+                                    <label for="DuzenliEgzersiz2">Hayır</label>
+
+                                </div>
+                                <br />
+                                <br />
+                                <div id="EgzersizGenelDiv" style="display:none">
+                                    <div id="EgzersizTuru">
+                                        <label style="margin-left:10px">EGZERSİZ TÜRÜ</label><br />
+                                        <input style="margin-left:10px" type="checkbox" id="EgzersizTuru1"
+                                               name="EgzersizTuru" value="email">
+                                        <label for="EgzersizTuru1">Yürüyüş</label>
+                                        <input style="margin-left:10px" type="checkbox" id="EgzersizTuru2"
+                                               name="EgzersizTuru" value="email">
+                                        <label for="EgzersizTuru2">Bisiklet</label>
+                                        <input style="margin-left:10px" type="checkbox" id="EgzersizTuru3"
+                                               name="EgzersizTuru" value="email">
+                                        <label for="EgzersizTuru3">Yüzme</label>
+                                        <input style="margin-left:10px" type="checkbox" id="EgzersizTuru4"
+                                               name="EgzersizTuru" value="email">
+                                        <label for="EgzersizTuru4">Plates</label>
+                                        <input style="margin-left:10px" type="checkbox" id="EgzersizTuru5"
+                                               name="EgzersizTuru" value="email">
+                                        <label for="EgzersizTuru5">Yoga</label><br />
+                                        <input style="margin-left:10px" type="checkbox" id="EgzersizTuru6"
+                                               name="EgzersizTuru" value="email">
+                                        <label for="EgzersizTuru6">Spor Salonunda Düzenli Çalışma</label>
+                                        <label style="margin-left:10px">
+                                            <span>Diğer(Belirtiniz)</span>
+                                            <input type="text" name="EgzersizTuru">
+
+                                        </label>
+
+
+                                    </div>
+                                    <br />
+
+                                    <div id="HaftadaKacGunEgzersiz">
+                                        <label for="HaftadaKacGunEgzersiz" class="form-label" style="margin-left:10px">HAFTADA KAÇ GÜN EGZERSİZ YAPARSINIZ?</label>
+                                        <input type="text" class="form-control" style="margin-left:10px" id="HaftadaKacGunEgzersiz" name="HaftadaKacGunEgzersiz" placeholder="örnek: 4" />
+                                    </div>
+
+                                    <br />
+
+                                    <div id="HaftadaToplamKacSaatEgzersiz">
+                                        <label for="HaftadaToplamKacSaatEgzersiz" class="form-label" style="margin-left:10px">HAFTADA TOPLAM KAÇ SAAT EGZERSİZ YAPARSINIZ?</label>
+                                        <input type="text" class="form-control" style="margin-left:10px" id="HaftadaToplamKacSaatEgzersiz" name="HaftadaToplamKacSaatEgzersiz" placeholder="örnek: 7" />
+                                    </div>
+                                    <br />
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="mb-3  col-md-6">
+                            <fieldset style="border: inset">
+                                <legend style="font-size:medium; margin-left:10px">MENTAL SAĞLIK</legend>
+                                <br />
+                                <label style="margin-left:10px">Kendinizi Ne Sıklıkla Çökkün, Üzgün, Mutsuz, Umutsuz Hissettiniz?</label>
+                                <br />
+                                <br />
+                                <div>
+                                    <input style="margin-left:10px" type="radio" id="MentalSaglik1"
+                                           name="MentalSaglik" value="email">
+                                    <label for="MentalSaglik1">Hiçbir zaman</label>
+                                    <input style="margin-left:10px" type="radio" id="MentalSaglik2"
+                                           name="MentalSaglik" value="email">
+                                    <label for="MentalSaglik2">Bazı günler</label>
+                                    <input style="margin-left:10px" type="radio" id="MentalSaglik3"
+                                           name="MentalSaglik" value="email">
+                                    <label for="MentalSaglik3">Günlerin yarıdan fazlasında</label>
+                                    <input style="margin-left:10px" type="radio" id="MentalSaglik4"
+                                           name="MentalSaglik" value="email">
+                                    <label for="MentalSaglik4">Hemen hemen her gün</label>
+                                </div>
+                                <br />
+                                <label style="margin-left:10px">Kendinizi Ne Sıklıkta Gergin, Huzursuz, Endişeli Hissettiniz?</label>
+                                <br />
+                                <br />
+                                <div>
+                                    <input style="margin-left:10px" type="radio" id="MentalSaglik21"
+                                           name="MentalSaglik2" value="email">
+                                    <label for="MentalSaglik21">Hiçbir zaman</label>
+                                    <input style="margin-left:10px" type="radio" id="MentalSaglik22"
+                                           name="MentalSaglik2" value="email">
+                                    <label for="MentalSaglik22">Bazı günler</label>
+                                    <input style="margin-left:10px" type="radio" id="MentalSaglik23"
+                                           name="MentalSaglik2" value="email">
+                                    <label for="MentalSaglik23">Günlerin yarıdan fazlasında</label>
+                                    <input style="margin-left:10px" type="radio" id="MentalSaglik24"
+                                           name="MentalSaglik2" value="email">
+                                    <label for="MentalSaglik24">Hemen hemen her gün</label>
+                                </div>
+                                <br />
+                            </fieldset>
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            <fieldset style="border:inset">
+                                <div class="mb-3">
+                                    <legend style="margin-left:10px; font-size:medium">Kaç Gün Uykusuzluk Ya Da Gün İçinde Uykulu Olma Hali Yaşadınız? (gün sayısı olarak belirtiniz)</legend>
+                                    <input style="margin-left:10px" type="text" class="form-control" id="KacGunUykusuzluk" name="KacGunUykusuzluk" placeholder="Örnek: 4" />
+                                </div>
+                                <br />
+
+                                <legend style="margin-left:10px; font-size:medium">Aktif Cinsel Hayatınız Var mı?</legend>
+                                <div>
+                                    <input style="margin-left:10px" type="radio" id="AktifCinselHayat1"
+                                           name="AktifCinselHayat" value="email">
+                                    <label for="AktifCinselHayat1">Evet</label>
+                                    <input style="margin-left:10px" type="radio" id="AktifCinselHayat2"
+                                           name="AktifCinselHayat" value="email">
+                                    <label for="AktifCinselHayat2">Hayır</label>
+
+                                </div>
+                                <br />
+
+
+
+                            </fieldset>
+
+
+                        </div>
+                        <div class="mt-2">
+                            <button type="submit" class="btn btn-primary me-2">Kaydet</button>
+                            <button type="reset" class="btn btn-outline-secondary">Vazgeç</button>
+                        </div>
+
+
+
+
+
+                    </div>
+                </form>
+            </div>
+            <!-- /Account -->
+        </div>
+    </div>
+</div>
+
+<!-- / Content -->
+
+
+
+<div class="content-backdrop fade"></div>
+
+<!-- Content wrapper -->
+<!-- / Layout page -->
+<!-- Overlay -->
+<div class="layout-overlay layout-menu-toggle"></div>
+
+<!-- / Layout wrapper -->
+<!-- Core JS -->
+<!-- build:js assets/vendor/js/core.js -->
+<script src="~/dist/assets/vendor/libs/jquery/jquery.js"></script>
+<script src="~/dist/assets/vendor/libs/popper/popper.js"></script>
+<script src="~/dist/assets/vendor/js/bootstrap.js"></script>
+<script src="~/dist/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+<script src="~/dist/assets/vendor/js/menu.js"></script>
+<!-- endbuild -->
+<!-- Vendors JS -->
+<!-- Main JS -->
+<script src="~/dist/assets/js/main.js"></script>
+
+<!-- Page JS -->
+<script src="~/dist/assets/js/pages-account-settings-account.js"></script>
+
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+

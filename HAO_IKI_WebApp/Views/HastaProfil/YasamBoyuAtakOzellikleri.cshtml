@@ -1,0 +1,230 @@
+﻿@{
+    Layout = "_Mainlayout";
+}
+                    <h4 class="fw-bold py-3 mb-4">
+                        <span class="text-muted fw-light">Hasta Profili </span>
+                    </h4>
+
+
+                    <!-- Header -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card mb-4">
+
+                                <div class="user-profile-header d-flex flex-column flex-sm-row text-sm-start text-center mb-4">
+
+                                    <div class="flex-grow-1 mt-3 mt-sm-3">
+                                        <div class="d-flex align-items-md-end align-items-sm-start align-items-center justify-content-md-between justify-content-start mx-4 flex-md-row flex-column gap-4">
+                                            <div class="user-profile-info">
+                                                <h4>AYŞE NUR</h4>
+                                                <ul class="list-inline mb-0 d-flex align-items-center flex-wrap justify-content-sm-start justify-content-center gap-2">
+                                                    
+                                                    <li class="list-inline-item fw-semibold">
+														<i class="">Yaş : </i> 38
+													</li>
+                                                    <li class="list-inline-item fw-semibold">
+                                                        <i>Cinsiyet : </i> Kadın
+                                                    </li>
+                                                    <li class="list-inline-item fw-semibold">
+                                                        <i> Anjio Ödem Tipi : </i> 1
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <a href="Kontroller" class="btn btn-primary text-nowrap" style="margin-left:0px; margin-right:0px; ">
+                                                <i class='bx bx-user-check'></i> Kontroller
+                                            </a>
+                                            
+                                            <a href="javascript:void(0)" class="btn btn-primary text-nowrap">
+                                                <i class='bx bx-user-check'></i> Hastayı Ata
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Header -->
+
+                  <div class="row ">
+                <div  class="col-md-12 ">
+                  <div class="my-custom-scrollbar my-custom-scrollbar-primary">
+
+
+                                <ul class="nav nav-pills flex-column flex-md-row mb-3 " style="font-size: 12px">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="DemografikVeriler"><i class="bx bx-user me-1"></i> DEMOGRAFİK VERİLER 1</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="DemografikVerilerIki"><i class="bx bx-bell me-1"></i> DEMOGRAFİK VERİLER 2</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="Komorbidite"><i class="bx bx-link-alt me-1"></i> KOMORBİDİTE</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="Kompleman"><i class="bx bx-link-alt me-1"></i> KOMPLEMAN</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="TiroidFonksiyonTestleri"><i class="bx bx-link-alt me-1"></i> TİROİD FONKSİYON TESTLERİ VE OTOANTİKOR</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="Genetik"><i class="bx bx-link-alt me-1"></i> GENETİK</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="HepatitSerolojisi"><i class="bx bx-link-alt me-1"></i> HEPATİT SEROLOJİSİ</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="YanlisTani"><i class="bx bx-link-alt me-1"></i> YANLIŞ TANI</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="YasamBoyuAtakOzellikleri"><i class="bx bx-link-alt me-1"></i> YAŞAM BOYU ATAK ÖZELLİKLERİ</a>
+                                    </li>
+                                </ul>
+                            </div>
+                  
+                </div>
+              </div>
+       
+              <h4 class="fw-bold py-3 mb-4">
+                <span>HASTA BİLGİLERİ</span> 
+              </h4>
+
+
+              <div class="row">
+                <!-- Vertical Scrollbar -->
+                <div class="col-md-12 col-sm-12">
+                  <div class="card overflow-auto mb-12" style="height: 450px">
+                    <h5 class="card-header">YAŞAM BOYU ATAK ÖZELLİKLERİ</h5>
+                    <div class="card-body" id="vertical-example">
+                      <form id="formAccountSettings" method="POST" onsubmit="return false">
+                          <hr />
+                                        <div class="row">
+                                            <div class="mb-3 col-md-6 bg-label-secondary">
+                                                <label for="fasiyal" class="form-label"type="form-label" id="fasiyal" name="fasiyal" autofocus>Fasiyal Atak : </label>
+                                            </div>
+                                            <div class="mb-3 col-md-6">
+                                                <label for="fasiyalSikligi" class="form-label"type="form-label" id="fasiyalSikligi" name="fasiyalSikligi" autofocus>Sıklığı : </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="mb-3 col-md-6">
+                                                <label for="dudak" class="form-label"type="form-label" id="dudak" name="dudak" autofocus>İzole Dudak Atağı : </label>
+                                            </div>
+                                            <div class="mb-3 col-md-6 bg-label-secondary">
+                                                <label for="dudakSikligi" class="form-label"type="form-label" id="dudakSikligi" name="dudakSikligi" autofocus>Sıklığı : </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="mb-3 col-md-6 bg-label-secondary">
+                                                <label for="dil" class="form-label"type="form-label" id="dil" name="dil" autofocus>Dil Atağı : </label>
+                                            </div>
+                                            <div class="mb-3 col-md-6">
+                                                <label for="dilSikligi" class="form-label"type="form-label" id="dilSikligi" name="dilSikligi" autofocus>Sıklığı : </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="mb-3 col-md-6">
+                                                <label for="uvula" class="form-label"type="form-label" id="uvula" name="uvula" autofocus>Uvula Atağı : </label>
+                                            </div>
+                                            <div class="mb-3 col-md-6 bg-label-secondary">
+                                                <label for="uvulaSikligi" class="form-label"type="form-label" id="uvulaSikligi" name="uvulaSikligi" autofocus>Sıklığı : </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="mb-3 col-md-6 bg-label-secondary">
+                                                <label for="larenks" class="form-label"type="form-label" id="larenks" name="larenks" autofocus>Larenks Atağı : </label>
+                                            </div>
+                                            <div class="mb-3 col-md-6">
+                                                <label for="larenksSikligi" class="form-label"type="form-label" id="larenksSikligi" name="larenksSikligi" autofocus>Sıklığı : </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="mb-3 col-md-6">
+                                                <label for="boyun" class="form-label"type="form-label" id="boyun" name="boyun" autofocus>Boyun Atağı : </label>
+                                            </div>
+                                            <div class="mb-3 col-md-6  bg-label-secondary">
+                                                <label for="boyunSikligi" class="form-label"type="form-label" id="boyunSikligi" name="boyunSikligi" autofocus>Sıklığı : </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="mb-3 col-md-6  bg-label-secondary">
+                                                <label for="ozefagus" class="form-label"type="form-label" id="ozefagus" name="ozefagus" autofocus>Özefagus Atağı : </label>
+                                            </div>
+                                            <div class="mb-3 col-md-6">
+                                                <label for="ozefagusSikligi" class="form-label"type="form-label" id="ozefagusSikligi" name="ozefagusSikligi" autofocus>Sıklığı : </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="mb-3 col-md-6">
+                                                <label for="ekstremite" class="form-label"type="form-label" id="ekstremite" name="ekstremite" autofocus>Ekstremite Atağı : </label>
+                                            </div>
+                                            <div class="mb-3 col-md-6 bg-label-secondary">
+                                                <label for="ekstremiteSikligi" class="form-label"type="form-label" id="ekstremiteSikligi" name="ekstremiteSikligi" autofocus>Sıklığı : </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="mb-3 col-md-6 bg-label-secondary">
+                                                <label for="gogus" class="form-label"type="form-label" id="gogus" name="gogus" autofocus>Göğüs Atağı : </label>
+                                            </div>
+                                            <div class="mb-3 col-md-6">
+                                                <label for="gogusSikligi" class="form-label"type="form-label" id="gogusSikligi" name="gogusSikligi" autofocus>Sıklığı : </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="mb-3 col-md-6">
+                                                <label for="renal" class="form-label"type="form-label" id="renal" name="renal" autofocus>Renal Atağı : </label>
+                                            </div>
+                                            <div class="mb-3 col-md-6 bg-label-secondary">
+                                                <label for="renalSikligi" class="form-label"type="form-label" id="renalSikligi" name="renalSikligi" autofocus>Sıklığı : </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="mb-3 col-md-6 bg-label-secondary">
+                                                <label for="mesane" class="form-label"type="form-label" id="mesane" name="mesane" autofocus>Mesane Atağı : </label>
+                                            </div>
+                                            <div class="mb-3 col-md-6">
+                                                <label for="mesaneSikligi" class="form-label"type="form-label" id="mesaneSikligi" name="mesaneSikligi" autofocus>Sıklığı : </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="mb-3 col-md-6">
+                                                <label for="kas" class="form-label"type="form-label" id="kas" name="kas" autofocus>Kas Atağı : </label>
+                                            </div>
+                                            <div class="mb-3 col-md-6 bg-label-secondary">
+                                                <label for="kasSikligi" class="form-label"type="form-label" id="kasSikligi" name="kasSikligi" autofocus>Sıklığı : </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="mb-3 col-md-6 bg-label-secondary">
+                                                <label for="eklem" class="form-label"type="form-label" id="eklem" name="eklem" autofocus>Eklem Atağı : </label>
+                                            </div>
+                                            <div class="mb-3 col-md-6">
+                                                <label for="eklemSikligi" class="form-label"type="form-label" id="eklemSikligi" name="eklemSikligi" autofocus>Sıklığı : </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="mb-3 col-md-6">
+                                                <label for="gastrointesinal" class="form-label"type="form-label" id="gastrointesinal" name="gastrointesinal" autofocus>Gastrointesinal Atağı : </label>
+                                            </div>
+                                            <div class="mb-3 col-md-6 bg-label-secondary">
+                                                <label for="gastrointesinalAtagi" class="form-label"type="form-label" id="gastrointesinalAtagi" name="gastrointesinalAtagi" autofocus>Sıklığı : </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="mb-3 col-md-6 bg-label-secondary">
+                                                <label for="anal" class="form-label"type="form-label" id="anal" name="anal" autofocus>Anal Atağı : </label>
+                                            </div>
+                                            <div class="mb-3 col-md-6">
+                                                <label for="analSikligi" class="form-label"type="form-label" id="analSikligi" name="analSikligi" autofocus>Sıklığı : </label>
+                                            </div>
+                                        </div>
+                                        
+                      </form>
+                      
+                    </div>
+                  </div>
+                </div>
+               
+            </div>
+            <!-- / Content -->
+
+          

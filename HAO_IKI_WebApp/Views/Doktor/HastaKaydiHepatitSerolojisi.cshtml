@@ -1,0 +1,228 @@
+﻿@{
+    Layout = "_MainLayout";
+}
+@model HAO_IKI_WebApp.Models.HepatitSerolojisi;
+
+<h4 class="fw-bold py-3 mb-4"><span class="" style="color:blueviolet">HASTA KAYDI </span> </h4>
+
+<div class="row ">
+    <div class="col-md-12 ">
+        <div class="my-custom-scrollbar my-custom-scrollbar-primary">
+            <ul class="nav nav-pills flex-column flex-md-row mb-3 " style="font-size: 12px">
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydi"><i class="bx bx-user me-1"></i> İLK KAYIT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiDemografikVerilerIki"><i class="bx bx-link-alt me-1"></i> DEMOGRAFİK VERİLER</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastakaydiKomorbidite"><i class="bx bx-link-alt me-1"></i> KOMORBİDİDİTE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiKompleman"><i class="bx bx-link-alt me-1"></i> KOMPLEMAN</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiTiroidFonksiyonTestleri"><i class="bx bx-link-alt me-1"></i> TİROİD FONKSİYON TESTLERİ VE OTOANTİKOR</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiGenetik"><i class="bx bx-link-alt me-1"></i> GENETİK</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="HastaKaydiHepatitSerolojisi">
+                        <i class="bx bx-link-alt me-1"></i> HEPAPTİT SEROLOJİSİ
+
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiYanlisTani"><i class="bx bx-link-alt me-1"></i> YANLIŞ TANI</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiYasamBoyuAtakOzellikleri"><i class="bx bx-link-alt me-1"></i> YAŞAM BOYU ATAK ÖZELLİKLERİ</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+
+
+<div class="col-xl-12">
+    <div class="card mb-6">
+        <h5 class="card-header">HEPATİT SEROLOJİ</h5>
+        <hr class="my-0" />
+        <div class="card-body">
+            <form method="post" asp-controller="Doktor" asp-action="HastaKaydiHepatitSerolojisi">
+                <div class="table-responsive">
+                    <table class="table table-striped table-borderless border-bottom">
+                        <tbody>
+                            <tr class="table-secondary">
+                                <td class="text-nowrap">ANTİ-HAV</td>
+                                <td>
+                                    <div class="form-check col-sm-1 form-check-inline" style="margin-left:30px">
+                                        <input class="form-check-input" asp-for="AntiHav" type="radio"  value="true" id="AntiHav1" onclick=myFunc(AntiHav1,AntiHavUyari)>
+                                        <label class="form-check-label" for="AntiHav1">Pozitif</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check col-sm-1 form-check-inline" style="margin-left:70px">
+                                        <input class="form-check-input" asp-for="AntiHav" type="radio" value="false" id="AntiHav2" onclick=myFunc(AntiHav1,AntiHavUyari)>
+                                        <label class="form-check-label" for="AntiHav2">Negatif</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div id="AntiHavUyari" style="display:none" class="mb-3 col-md-12">
+                                        <label for="AntiHavUyari" class="form-label">Hasta tedavi öncesi hepatit A ve B aşısı olmalıdır!!!</label>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td class="text-nowrap">HBS-AG-IGG</td>
+                                <td>
+                                    <div class="form-check col-sm-1 form-check-inline" style="margin-left:30px">
+                                        <input class="form-check-input" type="radio" asp-for="HbsAg" value="true" id="HbsAg1" onclick=myFunc(HbsAg1,HbsAgUyari)>
+                                        <label class="form-check-label" for="HbsAg1">Pozitif</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check col-sm-1 form-check-inline" style="margin-left:70px">
+                                        <input class="form-check-input" type="radio" asp-for="HbsAg" value="false" id="HbsAg2" onclick=myFunc(HbsAg1,HbsAgUyari)>
+                                        <label class="form-check-label" for="HbsAg2">Negatif</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div id="HbsAgUyari" class="mb-3 col-md-12" style="display:none">
+                                        <label for="HbsAgUyari" class="form-label">Hasta tedavi öncesi hepatit A ve B aşısı olmalıdır!!!</label>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-secondary">
+                                <td class="text-nowrap">HBC-AG-IGG</td>
+                                <td>
+                                    <div class="form-check col-sm-1 form-check-inline" style="margin-left:30px">
+                                        <input class="form-check-input" type="radio" asp-for="HbcAgIgg" value="true" id="HbcAgIgg1" onclick=myFunc(HbcAgIgg1,HbcAgIggUyari)>
+                                        <label class="form-check-label" for="HbcAgIgg1">Pozitif</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check col-sm-1 form-check-inline" style="margin-left:70px">
+                                        <input class="form-check-input" type="radio" asp-for="HbcAgIgg" value="false" id="HbcAgIgg2" onclick=myFunc(HbcAgIgg1,HbcAgIggUyari)>
+                                        <label class="form-check-label" for="HbcAgIgg2">Negatif</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div id="HbcAgIggUyari" class="mb-3 col-md-12" style="display:none">
+                                        <label for="HbcAgIggUyari" class="form-label">Hasta tedavi öncesi hepatit A ve B aşısı olmalıdır!!!</label>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-nowrap">HBE-AG-IGG</td>
+                                <td>
+                                    <div class="form-check col-sm-1 form-check-inline" style="margin-left:30px">
+                                        <input class="form-check-input" type="radio" asp-for="HbeAgIgg" value="true" id="HbeAgIgg1" onclick=myFunc(HbeAgIgg1,HbeAgIggUyari)>
+                                        <label class="form-check-label" for="HbeAgIgg1">Pozitif</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check col-sm-1 form-check-inline" style="margin-left:70px">
+                                        <input class="form-check-input" type="radio" asp-for="HbeAgIgg" value="false" id="HbeAgIgg2" onclick=myFunc(HbeAgIgg1,HbeAgIggUyari)>
+                                        <label class="form-check-label" for="HbeAgIgg2">Negatif</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div id="HbeAgIggUyari" class="mb-3 col-md-12" style="display:none">
+                                        <label for="HbeAgIggUyari" class="form-label">Hasta tedavi öncesi hepatit A ve B aşısı olmalıdır!!!</label>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-secondary">
+                                <td class="text-nowrap">ANTİ-HCV-IGG</td>
+                                <td>
+                                    <div class="form-check col-sm-1 form-check-inline" style="margin-left:30px">
+                                        <input class="form-check-input" type="radio" asp-for="AntiHcv" value="true" id="AntiHcv1">
+                                        <label class="form-check-label" for="AntiHcv1">Pozitif</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check col-sm-1 form-check-inline" style="margin-left:70px">
+                                        <input class="form-check-input" type="radio" asp-for="AntiHcv" value="false" id="AntiHcv1">
+                                        <label class="form-check-label" for="AntiHcv2">Negatif</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="mb-3 col-md-12">
+                                        <label></label>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td class="text-nowrap">ANTİ-HİV-IGG</td>
+                                <td>
+                                    <div class="form-check col-sm-1 form-check-inline" style="margin-left:30px">
+                                        <input class="form-check-input" type="radio" asp-for="AntiHivIgg" value="true" id="AntiHivIgg1">
+                                        <label class="form-check-label" for="AntiHivIgg1">Pozitif</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check col-sm-1 form-check-inline" style="margin-left:70px">
+                                        <input class="form-check-input" type="radio" asp-for="AntiHivIgg" value="false" id="AntiHivIgg2">
+                                        <label class="form-check-label" for="AntiHivIgg2">Negatif</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="mb-3 col-md-12">
+                                        <label></label>
+
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-secondary">
+                                <td class="text-nowrap">ANTİ-HBS</td>
+                                <td>
+                                    <div class="form-check col-sm-1 form-check-inline" style="margin-left:30px">
+                                        <input class="form-check-input" type="radio" asp-for="AntiHbs" value="true" id="AntiHbs1">
+                                        <label class="form-check-label" for="AntiHbs1">Pozitif</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check col-sm-1 form-check-inline" style="margin-left:70px">
+                                        <input class="form-check-input" type="radio" asp-for="AntiHbs" value="false" id="AntiHbs2">
+                                        <label class="form-check-label" for="AntiHbs2">Negatif</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="mb-3 col-md-12">
+                                        <label></label>
+
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <div class="mt-2">
+
+                        <button type="submit" data-save="modal" onclick="saveModal(this)" class="btn btn-primary me-2">Kaydet</button>
+                        <button type="reset" class="btn btn-outline-secondary" data-dismiss="modal">Vazgeç</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/site.js" asp-append-version="true"></script>
+
+
+

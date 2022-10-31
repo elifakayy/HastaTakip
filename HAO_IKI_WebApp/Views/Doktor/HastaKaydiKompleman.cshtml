@@ -1,0 +1,190 @@
+﻿@{
+    Layout = "_Mainlayout";
+}
+@model HAO_IKI_WebApp.Models.Kompleman
+<h4 class="fw-bold py-3 mb-4"><span class="" style="color:blueviolet">HASTA KAYDI </span> </h4>
+
+<div class="row ">
+    <div class="col-md-12 ">
+        <div class="my-custom-scrollbar my-custom-scrollbar-primary">
+
+
+            <ul class="nav nav-pills flex-column flex-md-row mb-3 " style="font-size: 12px">
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydi"><i class="bx bx-user me-1"></i> İLK KAYIT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydliDemografikVerilerIki"><i class="bx bx-bell me-1"></i> DEMOGRAFİK VERİLER</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiKomorbidite"><i class="bx bx-link-alt me-1"></i> KOMORBİDİDİTE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="HastaKaydiKompleman"><i class="bx bx-link-alt me-1"></i> KOMPLEMAN</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiTiroidFonksiyonTestleri"><i class="bx bx-link-alt me-1"></i> TİROİD FONKSİYON TESTLERİ VE OTOANTİKOR</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiGenetik"><i class="bx bx-link-alt me-1"></i> GENETİK</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiHepatitSerolojisi"><i class="bx bx-link-alt me-1"></i> HEPATİT SEROLOJİSİ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiYanlisTani"><i class="bx bx-link-alt me-1"></i> YANLIŞ TANI</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HastaKaydiYasamBoyuAtakOzellikleri"><i class="bx bx-link-alt me-1"></i> YAŞAM BOYU ATAK ÖZELLİKLERİ</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<div class="card mb-4">
+    <h5 class="card-header">KOMPLEMAN</h5>
+    <!-- Account -->
+
+    <hr class="my-0" />
+    <div class="card-body ">
+        <form method="post" asp-controller="Doktor" asp-action="HastaKaydiKompleman">
+            <ul class="list-group list-group-flush">
+
+                <li class="list-group-item list-group-item-secondary">
+
+                    <div class="mb-6 row">
+                        <label class="col-sm-6 col-form-label" style=" margin-bottom:10px">C1 İNHİBİTÖR DÜZEY</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" asp-for="C1InhibitorDuzey" id="C1InhibitorDuzey" placeholder="Düzey">
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" asp-for="C1InhibitorBirim" id="C1InhibitorBirim" placeholder="Birim">
+                        </div>
+                    </div>
+                </li>
+
+                <li class="list-group-item list-group-item">
+                    <div class="mb-6 row">
+                        <label class="col-sm-6 col-form-label" style=" margin-bottom:10px">C1 İNHİBİÖR FONKSİYONU</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" asp-for="C1InhibitorFonksiyonuDuzey" id="C1InhibitorFonksiyonuDuzey" placeholder="Düzey">
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" asp-for="C1InhibitorFonksiyonuBirim" id="C1InhibitorFonksiyonuBirim" placeholder="Birim">
+                        </div>
+                    </div>
+                </li>
+
+                <li class="list-group-item list-group-item-secondary">
+                    <div class="mb-6 row">
+                        <label class="col-sm-6 col-form-label" style=" margin-bottom:10px">C4</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" asp-for="C4Duzey" id="C4Duzey" placeholder="Düzey">
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" asp-for="C4Birim" id="C4Birim" placeholder="Birim">
+                        </div>
+                    </div>
+                </li>
+
+                <li class="list-group-item list-group-item">
+                    <div class="mb-6 row">
+                        <label class="col-sm-6 col-form-label" style=" margin-bottom:10px">C3</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" asp-for="C3Duzey" id="C3Duzey" placeholder="Düzey">
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" asp-for="C3Birim" id="C3Birim" placeholder="Birim">
+                        </div>
+                    </div>
+                </li>
+
+                <li class="list-group-item list-group-item-secondary">
+                    <div class="mb-6 row">
+                        <label class="col-sm-6 col-form-label" style=" margin-bottom:10px">C1Q</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" asp-for="C1qDuzey" id="C1qDuzey" placeholder="Düzey">
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" asp-for="C1qBirim" id="C1qBirim" placeholder="Birim">
+                        </div>
+                    </div>
+                </li>
+
+                <li class="list-group-item list-group-item">
+
+                    <div class="row">
+                        <label class="col-sm-6 col-form-label " style="margin-bottom:10px">ANTİ-C1 İNHİBİTÖR OTOANTİKORU
+
+                        </label>
+
+                        <div class="form-check col-sm-1 form-check-inline" style="margin-left:30px">
+                            <input class="form-check-input" type="radio" asp-for="Antic1InhibitorOtoantikoru" id="AntiC1InhibitorOtoantikoru1" value="true">
+                            <label class="form-check-label" for="AntiC1InhibitorOtoantikoru11">Pozitif</label>
+                        </div>
+                        <div class="form-check col-sm-1 form-check-inline" style="margin-left:70px">
+                            <input class="form-check-input" type="radio" asp-for="Antic1InhibitorOtoantikoru" id="AntiC1InhibitorOtoantikoru12" value="false">
+                            <label class="form-check-label" for="AntiC1InhibitorOtoantikoru12">Negatif</label>
+                        </div>
+
+                    </div>
+                </li>
+
+                <li class="list-group-item list-group-item">
+                    <div class="mb-6 col-md-6">
+                        <label for="html5-date-input" class="col-md-2 col-form-label">Tarih</label>
+
+                        <div class="col-md-6">
+
+                            <input class="form-control" type="date" asp-for="Tarih" id="Tarih">
+                        </div>
+                    </div>
+                </li>
+
+
+            </ul>
+
+            <div class="mt-2">
+                <button type="submit" class="btn btn-primary me-2">Kaydet</button>
+                <button type="reset" class="btn btn-outline-secondary">Vazgeç</button>
+            </div>
+        </form>
+    </div>
+    <!-- /Account -->
+</div>
+
+
+
+<!-- / Content -->
+
+
+
+<div class="content-backdrop fade"></div>
+
+<!-- Content wrapper -->
+<!-- / Layout page -->
+<!-- Overlay -->
+<div class="layout-overlay layout-menu-toggle"></div>
+
+<!-- / Layout wrapper -->
+<!-- Core JS -->
+<!-- build:js assets/vendor/js/core.js -->
+<script src="~/dist/assets/vendor/libs/jquery/jquery.js"></script>
+<script src="~/dist/assets/vendor/libs/popper/popper.js"></script>
+<script src="~/dist/assets/vendor/js/bootstrap.js"></script>
+<script src="~/dist/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+<script src="~/dist/assets/vendor/js/menu.js"></script>
+<!-- endbuild -->
+<!-- Vendors JS -->
+<!-- Main JS -->
+<script src="~/dist/assets/js/main.js"></script>
+
+<!-- Page JS -->
+<script src="~/dist/assets/js/pages-account-settings-account.js"></script>
+
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
